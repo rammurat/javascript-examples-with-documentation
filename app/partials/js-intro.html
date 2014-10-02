@@ -1,0 +1,72 @@
+
+
+<div class="js view">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="container-fluid" style="padding:0px 0px;">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><img style="position: relative;top: -8px;" src="../images/logo.png" width="36px;"/> <span style="font-size: 1.5em;">OOJS</span></a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+                    <form class="navbar-form navbar-left" id="search-form-dashboard" role="search"  method="post" action="server/server.php">
+                        <div class="form-group"  >
+                            <input type="hidden" class="form-control" id="search" name="action" value="search" >
+                            <input type="text" class="form-control" id="search" name="search" placeholder="Search"  >
+                        </div>
+                        <button type="button" class="btn btn-danger" id="search-button-dashboard" >Submit</button>
+                    </form>
+
+
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-xs-12 col-sm-4 col-md-3 paddingNone">
+                <div ng-include="'app/partials/sidebar.html'"></div>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-9 paddingNone">
+                <div class="example">
+                    <h4 class="question">What is Java Script?</h4>
+                    <p>JavaScript is a programming language used to make web pages interactive. It runs on your visitor's computer and doesn't require constant downloads from your website. JavaScript is often used to create polls and quizzes.</p>
+
+<div ng-include="'app/partials/clipboard.html'"></div>
+<pre class="prettyprint lang-html linenums">
+    &lt;script type="text/javascript"&gt;
+        // Say hello world until the user starts questioning
+        // the meaningfulness of their existence.
+        function helloWorld(world) {
+          for (var i = 42; --i &gt;= 0;) {
+                alert('Hello ' + String(world));
+          }
+        }
+    &lt;/script&gt;
+</pre>                    
+
+
+                    <div class="alert alert-info" role="alert">
+                        <strong>Note :</strong> It's Java Script not Java.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    ﻿</div>
+
+

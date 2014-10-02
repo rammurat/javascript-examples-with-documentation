@@ -1,0 +1,171 @@
+
+
+<div class="prototype view">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="container-fluid" style="padding:0px 0px;">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><img style="position: relative;top: -8px;" src="../images/logo.png" width="36px;"/> <span style="font-size: 1.5em;">OOJS</span></a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+                    <form class="navbar-form navbar-left" id="search-form-dashboard" role="search"  method="post" action="server/server.php">
+                        <div class="form-group"  >
+                            <input type="hidden" class="form-control" id="search" name="action" value="search" >
+                            <input type="text" class="form-control" id="search" name="search" placeholder="Search"  >
+                        </div>
+                        <button type="button" class="btn btn-danger" id="search-button-dashboard" >Submit</button>
+                    </form>
+
+
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-xs-12 col-sm-4 col-md-3 paddingNone">
+
+                <div ng-include="'app/partials/sidebar.html'"></div>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-9 paddingNone">
+                <div class="example">
+
+                    <div class="section">
+                        <h4 class="question">What is Java Script Object?</h4>
+                        <p>
+                            In JavaScript, arrays are objects, functions are objects,regular expressions are objects, and, of course, objects are objects.
+
+                        </p>
+
+                        <strong>What an object can be?</strong>
+                        <p>An object is a container of properties, where a property has a name and a value. A
+                            property name can be any string, including the empty string. A property value can be
+                            any JavaScript value except for undefined.</p>
+
+                        <strong>Why Objects?</strong>
+                        <p>Objects are useful for collecting and organizing
+                            data. Objects can contain other objects, so they can easily represent tree or graph
+                            structures.</p>
+
+                        <strong>Features</strong>
+                        <ul>
+                            <li>Allows one object to inherit the properties of another object.</li>
+                            <li>Key value pair data representation</li>
+                            <li>Can store array and object itself</li>
+                        </ul>
+
+                        <strong>Object Literals</strong>
+                        <p>Object literals provide a very convenient notation for creating new object values.
+                            An object literal is a pair of curly braces surrounding zero or more name/value pairs.</p>
+
+                        <div ng-include="'app/partials/clipboard.html'"></div>                        
+                        <pre class="prettyprint lang-html linenums">
+    &lt;script type="text/javascript"&gt;
+        var empty_object = {};
+        var person = {
+            "first-name": "Deepak",
+            "last-name": "Sharma"
+        };
+    &lt;/script&gt;
+                        </pre>                        
+
+                        <strong>Object containing object</strong>
+                        <p></p>
+                        <div ng-include="'app/partials/clipboard.html'"></div>                        
+                        <pre class="prettyprint lang-html linenums">
+    &lt;script type="text/javascript"&gt;
+        var flight = {
+            airline: "Air India",
+            number: 815,
+            departure: {
+                IATA: "SYD",
+                time: "2004-09-22 14:55",
+                city: "Delhi"
+            },
+            arrival: {
+                IATA: "LAX",
+                time: "2004-09-23 10:42",
+                city: "Banglore"
+            }
+        };
+    &lt;/script&gt;
+                        </pre>
+
+                        <strong>Object containing Array</strong>
+                        <p></p>
+                        <div ng-include="'app/partials/clipboard.html'"></div>                        
+                        <pre class="prettyprint lang-html linenums">
+    &lt;script type="text/javascript"&gt;
+        var empty_object = {};
+        var company = {
+            "name": "Sapient",
+            "location": "Gurgaon",
+            "employees" : [
+                {'id':10,'name':'Deepak Sharma'},
+                {'id':20,'name':'Rajat Malhotra'},
+                {'id':30,'name':'Ajay Verma'}
+            ]
+        };
+    &lt;/script&gt;
+                        </pre>
+
+                        <strong>Retrieval</strong>
+                        <p></p>
+                        <div ng-include="'app/partials/clipboard.html'"></div>                        
+                        <pre class="prettyprint lang-html linenums">
+    &lt;script type="text/javascript"&gt;
+        // Say hello world until the user starts questioning
+        // the meaningfulness of their existence.
+        function helloWorld(world) {
+          for (var i = 42; --i &gt;= 0;) {
+                alert('Hello ' + String(world));
+          }
+        }
+    &lt;/script&gt;
+                        </pre>
+
+                        <strong>Good Part</strong>
+                        <ul>
+                            <li>Property name can be empty.</li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+
+                        <strong>Bad Part</strong>
+                        <ul>
+                            <li>Property name should not be a reserved keyword</li>
+                            <li>Property should be a string, to access later on</li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+
+
+
+
+                        <div class="alert alert-info" role="alert">
+                            <strong>Note :</strong> It's Java Script not Java.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    ﻿</div>
+
+
