@@ -1,79 +1,61 @@
 
 
-<div class="prototype view">
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="container">
-            <div class="container-fluid" style="padding:0px 0px;">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#"><img style="position: relative;top: -8px;" src="../images/logo.png" width="36px;"/> <span style="font-size: 1.5em;">OOJS</span></a>
+<div class="section">
+    <h3 class="question">What is JavaScript Object?</h3>
+    <p> In JavaScript, arrays are objects, functions are objects,regular expressions are objects, and, of course, 
+        objects are objects. Almost "everything" in JavaScript are treated as objects. </p>
+
+    <h3>What an object can be?</h3>
+    <p>An object is a container of properties, where a property has a name and a value. A
+        property name can be any string, including the empty string. A property value can be
+        any JavaScript value except for undefined.</p>
+
+    <h3>Why Objects?</h3>
+    <p>Objects are useful for collecting and organizing
+        data. Objects can contain other objects, so they can easily represent tree or graph
+        structures.</p>
+
+
+
+    <h3>Creating a JavaScript Object</h3>
+    <p>There are three ways to create JavaScript object.</p>
+    <ul>
+
+
+        <li>
+            <h4>Creating Object using new keyword</h4>
+            <p>Object literals provide a very convenient notation for creating new object values.
+                An object literal is a pair of curly braces surrounding zero or more name/value pairs.</p>
+
+            <div class="clearfix clipboardCnt">
+                <div class="btn-group pull-right">
+                    <button  type="button" class="btn btn-default"><a href="http://jsfiddle.net/rammurat/3sfa517k/1/" target="_blank">Live Demo</a></button>
+                    <button  type="button" class="btn btn-default clipboardButton">Copy to Clipboard</button>
                 </div>
+            </div>                         
+            <pre class="prettyprint lang-html linenums">
+    &lt;script type="text/javascript"&gt;
+        var empty_object = new Object();
+        var person =  = new Object();
+            person.firstName = "Deepak",
+            person.lastName =  "Sharma"
+        };
+    &lt;/script&gt;
+            </pre>   
+        </li>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <li>
+            <h4>Creating Object using Object Literals</h4>
+            <p>Object literals provide a very convenient notation for creating new object values.
+                An object literal is a pair of curly braces surrounding zero or more name/value pairs.</p>
 
-
-                    <form class="navbar-form navbar-left" id="search-form-dashboard" role="search"  method="post" action="server/server.php">
-                        <div class="form-group"  >
-                            <input type="hidden" class="form-control" id="search" name="action" value="search" >
-                            <input type="text" class="form-control" id="search" name="search" placeholder="Search"  >
-                        </div>
-                        <button type="button" class="btn btn-danger" id="search-button-dashboard" >Submit</button>
-                    </form>
-
-
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </div>
-    </nav>
-
-    <div class="container">
-
-        <div class="row">
-
-            <div class="col-xs-12 col-sm-4 col-md-3 paddingNone">
-
-                <div ng-include="'app/partials/sidebar.html'"></div>
-            </div>
-            <div class="col-xs-12 col-sm-8 col-md-9 paddingNone">
-                <div class="example">
-
-                    <div class="section">
-                        <h4 class="question">What is Java Script Object?</h4>
-                        <p>
-                            In JavaScript, arrays are objects, functions are objects,regular expressions are objects, and, of course, objects are objects.
-
-                        </p>
-
-                        <strong>What an object can be?</strong>
-                        <p>An object is a container of properties, where a property has a name and a value. A
-                            property name can be any string, including the empty string. A property value can be
-                            any JavaScript value except for undefined.</p>
-
-                        <strong>Why Objects?</strong>
-                        <p>Objects are useful for collecting and organizing
-                            data. Objects can contain other objects, so they can easily represent tree or graph
-                            structures.</p>
-
-                        <strong>Features</strong>
-                        <ul>
-                            <li>Allows one object to inherit the properties of another object.</li>
-                            <li>Key value pair data representation</li>
-                            <li>Can store array and object itself</li>
-                        </ul>
-
-                        <strong>Object Literals</strong>
-                        <p>Object literals provide a very convenient notation for creating new object values.
-                            An object literal is a pair of curly braces surrounding zero or more name/value pairs.</p>
-
-                        <div ng-include="'app/partials/clipboard.html'"></div>                        
-                        <pre class="prettyprint lang-html linenums">
+            <div class="clearfix clipboardCnt">
+                <div class="btn-group pull-right">
+                    <button  type="button" class="btn btn-default"><a href="http://jsfiddle.net/rammurat/wuxjapwn/" target="_blank">Live Demo</a></button>
+                    <button  type="button" class="btn btn-default clipboardButton">Copy to Clipboard</button>
+                </div>
+            </div>                        
+            <pre class="prettyprint lang-html linenums">
     &lt;script type="text/javascript"&gt;
         var empty_object = {};
         var person = {
@@ -81,12 +63,47 @@
             "last-name": "Sharma"
         };
     &lt;/script&gt;
-                        </pre>                        
+            </pre>   
+        </li>
 
-                        <strong>Object containing object</strong>
-                        <p></p>
-                        <div ng-include="'app/partials/clipboard.html'"></div>                        
-                        <pre class="prettyprint lang-html linenums">
+        <li>
+            <h4>Creating Object using object constructor</h4>
+            <p>Object literals provide a very convenient notation for creating new object values.
+                An object literal is a pair of curly braces surrounding zero or more name/value pairs.</p>
+
+            <div class="clearfix clipboardCnt">
+                <div class="btn-group pull-right">
+                    <button  type="button" class="btn btn-default"><a href="http://jsfiddle.net/rammurat/25ccatfb/" target="_blank">Live Demo</a></button>
+                    <button  type="button" class="btn btn-default clipboardButton">Copy to Clipboard</button>
+                </div>
+            </div>                        
+            <pre class="prettyprint lang-html linenums">
+    &lt;script type="text/javascript"&gt;
+    function Person(first, last) {
+        this.firstName = first;
+        this.lastName = last;
+    }
+    var empty_object = new Empty_object();
+    var person = new Person("Deepak", "Sharma");
+    &lt;/script&gt;
+            </pre>   
+        </li>
+    </ul>
+
+    <h3 class="question">Different ways to store data in JavaScript Object</h3>
+    <p>There are different ways to store data into JavaScript object, here are couple of examples. </p>
+
+    <ul>
+        <li>
+            <h4 class="question">Object containing object</h4>
+            <p>In JavaScript one object can contain other objects as well.  </p>
+            <div class="clearfix clipboardCnt">
+                <div class="btn-group pull-right">
+                    <button  type="button" class="btn btn-default"><a href="http://jsfiddle.net/rammurat/04k2o4fL/" target="_blank">Live Demo</a></button>
+                    <button  type="button" class="btn btn-default clipboardButton">Copy to Clipboard</button>
+                </div>
+            </div>                         
+            <pre class="prettyprint lang-html linenums">
     &lt;script type="text/javascript"&gt;
         var flight = {
             airline: "Air India",
@@ -103,12 +120,20 @@
             }
         };
     &lt;/script&gt;
-                        </pre>
+            </pre>
+        </li>
 
-                        <strong>Object containing Array</strong>
-                        <p></p>
-                        <div ng-include="'app/partials/clipboard.html'"></div>                        
-                        <pre class="prettyprint lang-html linenums">
+        <li>
+
+            <h4 class="question">Object containing Array</h4>
+            <p>As we talked earlier an Array is also treated as object and object can store other objects.  </p>
+            <div class="clearfix clipboardCnt">
+                <div class="btn-group pull-right">
+                    <button  type="button" class="btn btn-default"><a href="http://jsfiddle.net/rammurat/f5Lra88y/" target="_blank">Live Demo</a></button>
+                    <button  type="button" class="btn btn-default clipboardButton">Copy to Clipboard</button>
+                </div>
+            </div>                         
+            <pre class="prettyprint lang-html linenums">
     &lt;script type="text/javascript"&gt;
         var empty_object = {};
         var company = {
@@ -121,52 +146,85 @@
             ]
         };
     &lt;/script&gt;
-                        </pre>
-
-                        <strong>Retrieval</strong>
-                        <p></p>
-                        <div ng-include="'app/partials/clipboard.html'"></div>                        
-                        <pre class="prettyprint lang-html linenums">
-    &lt;script type="text/javascript"&gt;
-        // Say hello world until the user starts questioning
-        // the meaningfulness of their existence.
-        function helloWorld(world) {
-          for (var i = 42; --i &gt;= 0;) {
-                alert('Hello ' + String(world));
-          }
-        }
-    &lt;/script&gt;
-                        </pre>
-
-                        <strong>Good Part</strong>
-                        <ul>
-                            <li>Property name can be empty.</li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-
-                        <strong>Bad Part</strong>
-                        <ul>
-                            <li>Property name should not be a reserved keyword</li>
-                            <li>Property should be a string, to access later on</li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-
-
-
-
-                        <div class="alert alert-info" role="alert">
-                            <strong>Note :</strong> It's Java Script not Java.
-                        </div>
-                    </div>
+            </pre>
+        </li>
+        <li>
+            <h4 class="question">Object containing Methods</h4>
+            <p>Methods are the actions that can be performed on objects.</p>
+            <div class="clearfix clipboardCnt">
+                <div class="btn-group pull-right">
+                    <button  type="button" class="btn btn-default"><a href="http://jsfiddle.net/rammurat/478z85d2/1/" target="_blank">Live Demo</a></button>
+                    <button  type="button" class="btn btn-default clipboardButton">Copy to Clipboard</button>
                 </div>
-            </div>
-        </div>
+            </div>                         
+            <pre class="prettyprint lang-html linenums">
+    &lt;script type="text/javascript"&gt;
+        var empty_object = {};
+        var company = {
+            "name": "Sapient",
+            "location": "Gurgaon",
+            getEmployees : function(){
+                return 2000;
+            },
+            getProjects : function(){
+                return ["Project 1","Project 2","Project 3","Project 4","Project 5"]
+            }
+        };
+    &lt;/script&gt;
+            </pre>
+        </li>
+    </ul>
 
-    </div>
-    ﻿</div>
+    <h3 class="question">Object Retrieval</h3>
+    <p>We can retrieve object properties by two ways </p>
+    <ul>
+        <li>Using (.) dot notation
+            <div class="clearfix clipboardCnt">
+                <div class="btn-group pull-right">
+                    <button  type="button" class="btn btn-default"><a href="http://jsfiddle.net/rammurat/5acj3x8a/" target="_blank">Live Demo</a></button>
+                    <button  type="button" class="btn btn-default clipboardButton">Copy to Clipboard</button>
+                </div>
+            </div>                         
+            <pre class="prettyprint lang-html linenums">
+    &lt;script type="text/javascript"&gt;
+        var firstName = person.firstName,
+            lastName = person.lastName; 
+    &lt;/script&gt;
+            </pre>
+        </li>
+        <li>Using "[]" bracket notation
+            <div class="clearfix clipboardCnt">
+                <div class="btn-group pull-right">
+                    <button  type="button" class="btn btn-default"><a href="http://jsfiddle.net/rammurat/z17eqqju/" target="_blank">Live Demo</a></button>
+                    <button  type="button" class="btn btn-default clipboardButton">Copy to Clipboard</button>
+                </div>
+            </div>                        
+            <pre class="prettyprint lang-html linenums">
+    &lt;script type="text/javascript"&gt;
+        var firstName = person['firstName'],
+            lastName = person['lastName']; 
+    &lt;/script&gt;
+            </pre>
+        </li>
+    </ul>
 
-	
+    <h3>Features</h3>
+    <ul>
+        <li>It allows one object to inherit the properties of another object.</li>
+        <li>Key value pair data representation</li>
+        <li>Can store array and object itself</li>
+    </ul>
 
+    <h3>Good Parts</h3>
+    <ul>
+        <li>Property name can be empty.</li>
+        <li>Dates are object</li>
+    </ul>
+
+    <h3>Bad Parts</h3>
+    <ul>
+        <li>Property name should not be a reserved keyword</li>
+        <li>Property should be a string, to access later on</li>
+    </ul>
+
+</div>

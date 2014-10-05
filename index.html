@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>OOJS </title>
+        <title>OOJS | JavaScript </title>
 
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -12,8 +12,8 @@
         <script src="js/code/prettify.js"></script>
         <script src="js/code/lang-css.js"></script>
 
-		<style type="text/css">
-        
+        <style type="text/css">
+
             .clipboardCnt{
                 margin-bottom: 10px;
             }
@@ -30,7 +30,7 @@
                 background-color: #fff;
                 border-color: #eee;
                 border-style: solid;
-                border-width: 1px 1px 1px 0px;
+                border-width: 1px 1px 1px 1px;
             }
             .paddingNone{
                 padding: 0px;
@@ -53,24 +53,29 @@
     </head>
     <body role="document" data-ng-controller="OOJSController">
 
+        <div class="js view">
+             <div ng-include="'app/partials/header.html'"></div>
 
-
-
-
-        <div animated-view></div>
-
-        <nav class="navbar navbar-default" role="navigation" style="position: relative;left:0px;bottom:0px;width:100%;margin-bottom:0px;">
             <div class="container">
-                <div class="container-fluid" style="padding:0px 0px;">
-                    <ul class="list-unstyled list-inline" style="padding-top:15px;">
-                        <li>Copyright 2014</li> 
-                        <li> | </li> 
-                        <li><a href="#">About Team</a></li>
 
-                    </ul>
-                </div><!-- /.container-fluid -->
+                <div class="row">
+
+                    <div id="sidebar" class="col-xs-12 col-sm-4 col-md-3 paddingNone">
+                        <div ng-include="'app/partials/sidebar.html'"></div>
+                    </div>
+                    <div class="col-xs-12 col-sm-8 col-md-9 paddingNone">
+                        <div class="example">
+
+                            <div animated-view></div>
+
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </nav>
+             
+             <div ng-include="'app/partials/footer.html'"></div>
+        </div>
 
 
         <script type="text/javascript" src="js/angular.js"></script>
@@ -83,6 +88,16 @@
 
         <script src="app/directives/animatedView.js"></script>
 
+        <script>
+            $(function(){
+                
+                //Update current selected anchor or link user is viewing
+                $('body').delegate("#sidebar a","click",function(){
+                    $('.list-group a').removeClass('active');
+                    $(this).addClass('active');
+                });
+            });
+            
+        </script>
     </body>
 </html>
-<iframe width="100%" height="300" src="http://jsfiddle.net/rammurat/wuxjapwn/1/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>

@@ -1,72 +1,135 @@
+<div class="section">
+    <h3 class="question">What is JavaScript?</h3>
+    <p>JavaScript is a programming language used to make web pages interactive, and increasingly considered an
+        "assembly" language (a compiler target) according to its creator. </p>
+
+    <p>It is most commonly used as part of web browsers, whose implementations allow client-side scripts to interact with the user, 
+        control the browser, communicate asynchronously, and alter the document content that is displayed.</p>
+
+    <p>It is also being used in server-side network programming (with Node.js),game development and the creation of desktop
+        and mobile applications.</p>
+
+    <p>JavaScript is classified as a prototype-based scripting language with dynamic typing and has first-class functions.
+        This mix of features makes it a multi-paradigm language, supporting object-oriented, imperative, and functional
+        programming styles.The syntax of JavaScript is actually derived from C and rest of its own. </p>
 
 
-<div class="js view">
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="container">
-            <div class="container-fluid" style="padding:0px 0px;">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#"><img style="position: relative;top: -8px;" src="../images/logo.png" width="36px;"/> <span style="font-size: 1.5em;">OOJS</span></a>
-                </div>
+    <h3>What can we do with JavaScript?</h3>
+    <ul>
+        <li>Put text in an HTML page on-the-fly.</li>
+        <li>Change HTML elements</li>
+        <li>Delete HTML elements</li>
+        <li>Create new HTML elements</li>
+        <li>Copy and clone HTML elements</li>
+        <li>Update attributes</li>
+        <li>Detect visitors' browsers.</li>
+        <li>Create cookies</li>
+        <li>Validate web form data</li>
+    </ul>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <h3>What do I need to run JavaScript?:</h3>
+    <p>Browser (Safari,Chrome,Mozilla,Internet Explorer)</p>
 
+    <h3>How to include JavaScript into your Web page?</h3>
+    <p>There are two ways to includes JavaScript in to the page</p>
+    <ul>
+        <li>
+            <h4 class="question">Internal Script</h4> 
+            <p>While using internal JavaScript, As per W3C Standard and Consortium we should write JavaScript in head section under script tag,
+                but lot of experienced JavaScript geeks don't prefer that and suggest to write/include your JavaScript at the bottom of the page
+                as sometime due to heavy JavaScript, html takes more time to render on the page and its not good <i>User experience</i>.    </p>
+            <div class="alert alert-info">Here is an example of one dummy <strong>index.html</strong> web page.</div> 
 
-                    <form class="navbar-form navbar-left" id="search-form-dashboard" role="search"  method="post" action="server/server.php">
-                        <div class="form-group"  >
-                            <input type="hidden" class="form-control" id="search" name="action" value="search" >
-                            <input type="text" class="form-control" id="search" name="search" placeholder="Search"  >
-                        </div>
-                        <button type="button" class="btn btn-danger" id="search-button-dashboard" >Submit</button>
-                    </form>
-
-
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </div>
-    </nav>
-
-    <div class="container">
-
-        <div class="row">
-
-            <div class="col-xs-12 col-sm-4 col-md-3 paddingNone">
-                <div ng-include="'app/partials/sidebar.html'"></div>
-            </div>
-            <div class="col-xs-12 col-sm-8 col-md-9 paddingNone">
-                <div class="example">
-                    <h4 class="question">What is Java Script?</h4>
-                    <p>JavaScript is a programming language used to make web pages interactive. It runs on your visitor's computer and doesn't require constant downloads from your website. JavaScript is often used to create polls and quizzes.</p>
-
-<div ng-include="'app/partials/clipboard.html'"></div>
-<pre class="prettyprint lang-html linenums">
-    &lt;script type="text/javascript"&gt;
-        // Say hello world until the user starts questioning
-        // the meaningfulness of their existence.
-        function helloWorld(world) {
-          for (var i = 42; --i &gt;= 0;) {
-                alert('Hello ' + String(world));
-          }
-        }
-    &lt;/script&gt;
-</pre>                    
-
-
-                    <div class="alert alert-info" role="alert">
-                        <strong>Note :</strong> It's Java Script not Java.
-                    </div>
+            <div class="clearfix clipboardCnt">
+                <div class="btn-group pull-right">
+                    <button  type="button" class="btn btn-default"><a href="http://jsfiddle.net/rammurat/qm3db2oy/" target="_blank">Live Demo</a></button>
+                    <button  type="button" class="btn btn-default clipboardButton">Copy to Clipboard</button>
                 </div>
             </div>
-        </div>
 
-    </div>
-    ﻿</div>
+            <pre class="prettyprint lang-html linenums">
+&lt;!Doctype&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;script type="text/javascript"&gt;
+            var empty_object = {};
+            var person = {
+                "first-name": "Deepak",
+                "last-name": "Sharma"
+            };
+        &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;This is web page&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+            </pre> 
+        </li>
+        <li>
+            <h4 class="question">External JavScript File</h4>
+            <p>You can include JavaScript externally by putting JavaScript code into seperate file and then include into your web page. </p>
+            <div class="alert alert-info">Here is an example of one dummy <strong>index.html</strong> web page and corresponding JavaScript <strong>script.js</strong> file.</div>
+            <div class="clearfix clipboardCnt">
+                <div class="btn-group pull-right">
+                    <button  type="button" class="btn btn-default"><a href="http://jsfiddle.net/rammurat/Lmxo3eed/" target="_blank">Live Demo</a></button>
+                    <button  type="button" class="btn btn-default clipboardButton">Copy to Clipboard</button>
+                </div>
+            </div>                       
+            <pre class="prettyprint lang-html linenums">
+&lt;!Doctype&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;script type="text/javascript"src="script.js"&gt;   &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;This is web page&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+            </pre> 
+
+            <pre class="prettyprint lang-html linenums">
+var empty_object = {};
+var person = {
+    "first-name": "Deepak",
+    "last-name": "Sharma"
+};
+            </pre>
+        </li>
+    </ul>
+
+    <h3>JavaScript VS Java</h3>
+    <p>The JavaScript programming language, developed by Netscape, Inc., is not part of the Java platform.</p>
+
+    <p>JavaScript does not create applets or stand-alone applications. In its most common form, JavaScript resides inside HTML documents, 
+        and can provide levels of interactivity to web pages that are not achievable with simple HTML.</p>
+
+    <p>Key differences between Java and JavaScript:</p>
+    <ul>
+        <li>Java is an OOP programming language while JavaScript is an OOP scripting language.</li>
+        <li>Java creates applications that run in a virtual machine or browser while JavaScript code is run on a browser only.</li>
+        <li>Java code needs to be compiled while JavaScript code are all in text.</li>
+
+    </ul>
 
 
+    <h3>Good Parts</h3>
+    <ul>
+        <li>JavaScript is the most popular programming language in the world.</li>
+        <li>JavaScript can manipulate the DOM (change HTML contents).</li>
+    </ul>
+
+    <h3>Bad Parts</h3>
+    <ul>
+        <li>Performance gets down if script is too heavy.</li>
+    </ul>
+
+
+    <h3>Preferred JavaScript Editors</h3>
+    <p></p>
+    <ul>
+        <li><a href="http://www.sublimetext.com/2" target="_blank">Sublime Text</a></li>
+        <li><a href="https://netbeans.org/downloads/index.html"  target="_blank">Netbeans</a></li>
+        <li><a href="https://eclipse.org/downloads/packages/eclipse-ide-javascript-web-developers/heliosr"  target="_blank">Eclipse</a></li>
+        <li><a href="http://notepad-plus-plus.org/download/v6.6.9.html"  target="_blank">Notepad++</a></li>
+    </ul>
+</div>
