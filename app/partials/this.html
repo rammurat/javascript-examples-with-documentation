@@ -1,0 +1,119 @@
+<div class="section">
+    <h3 class="question">What is (this) in JavaScript? </h3>
+    <p> In JavaScript <code>this</code> always refers to the "owner" of the function we're executing, or rather, 
+	to the object that a function is a method of. When we define our faithful function <code>doSomething()</code>
+	in a page, its owner is the page, or rather, the window object (or global object) of JavaScript. </p>
+
+
+
+	<h3>Scope and behaviour of (this)</h3>
+	<p>
+		<code>this</code> always refers to current scope and it has different scope with methods,objects 
+		and classes. Here are couple of examples with live demo.
+	</p>
+	<ul>
+		<li>
+			<h4>(this) by default</h4>
+			<p>By default this denotes to window level object whether you access <code>this</code> directly in the page
+			or call under any method. </p>
+<pre class="prettyprint lang-html linenums">
+&lt;script type="text/javascript"&gt;
+	// define a function
+	var myFunction = function () {
+	  console.log(this);
+	};
+
+	// call it
+	myFunction();
+&lt;/script&gt;
+</pre> 
+
+
+		</li>
+		<li>
+			<h4>(this) and Object</h4>
+			<p>When we access <code>this</code> with in a object it returns object itself.In below example method
+			<mark>name</mark> calls itself and access other members value using <code>this</code> keyword.</p>
+<pre class="prettyprint lang-html linenums">
+&lt;script type="text/javascript"&gt;
+	var person = {
+		firstName: "Deepak",
+		lastName: "Sharma",
+		name :function(){
+			return this.firstName + " " + this.lastName;
+		}
+	};
+&lt;/script&gt;
+</pre>  			
+		</li>
+		<li>
+			<h4>(this) and Constructor</h4>
+			<p>You can use <code>this</code> with Constructor where you can access any method of an object without using <code>return</code> keyword.</p>
+<pre class="prettyprint lang-html linenums">
+&lt;script type="text/javascript"&gt;
+	var myConstructor = function () {
+		this.someMethod = function () {
+			console.log(this);
+		};
+	};
+
+	var a = new myConstructor();
+	a.someMethod();
+&lt;/script&gt;
+</pre> 
+		</li>
+		<li>
+			<h4>(this) and Prototype</h4>
+			<p>You can apply the same concept on Prototype as well.here is quick example:</p>
+<pre class="prettyprint lang-html linenums">
+&lt;script type="text/javascript"&gt;
+	var myConstructor = function () {
+		this.someMethod = function () {
+			console.log(this);
+		};
+	};
+
+	myConstructor.prototype = {
+		somePrototypeMethod: function () {
+			console.log(this);
+		}
+	};
+
+	var a = new myConstructor();
+	a.someMethod();
+	a.somePrototypeMethod();
+&lt;/script&gt;
+</pre> 
+		</li>
+		
+		<li>
+			<h4>(this) and Looping</h4>
+			<p>You can also use <code>this</code> to fetch any value while iterating the loop.</p>
+<pre class="prettyprint lang-html linenums">
+&lt;script type="text/javascript"&gt;
+	var person = [{
+	  name: 'Sachin'
+	},{
+	  name: 'Ramesh'
+	},{
+	  name: 'Suresh'
+	}];
+	person.forEach(function (item) {
+	  (function () {
+		console.log(item); //Object {name: "Sachin"} 
+		console.log(this.name); //Sachin
+	  }).call(item);
+	});
+&lt;/script&gt;
+</pre> 
+		</li>
+	</ul>
+
+	
+
+	
+	
+	
+	
+	
+</div>
