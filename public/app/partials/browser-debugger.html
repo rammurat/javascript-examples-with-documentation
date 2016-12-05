@@ -1,0 +1,58 @@
+<div class="section">
+    <h3 class="question">Debug Browser (Chrome)</h3>
+    <p> Google chrome and other big browsers like Mozilla and Safari provides window level object to run,test,debug your code
+	on runtime and after page creation. Below are couple of examples to test it out.</p>
+
+	<ul>
+		<li>
+			<h4>Console Print</h4>
+			<p>To print any value of variable,object,array you can use <code>console.log()</code> method.</p>
+		</li>
+		<li>
+			<h4>Clear Console</h4>
+			<p>To clear the console before printing you values, you can clear entire console by executing <code>console.clear()</code>" method.</p>
+		</li>
+		<li>
+			<h4>Error on Console</h4>
+			<p>To clear the console before printing you values, you can clear entire console by executing <code>console.error()</code> method.</p>
+		</li>
+		<li>
+			<h4>Warning on Console</h4>
+			<p>To show warning on console during exception handling you can use <code>console.warn()</code> method.</p>
+		</li>
+	</ul>
+
+	<p>Here are quick links to know more about Chrome debugging</p>
+	<ul>
+		<li><a href="https://developer.chrome.com/devtools/docs/console">Chrome Console</a></li>
+		<li><a href="https://developer.chrome.com/devtools/docs/javascript-debugging">JavaScript Debugging</a></li>
+	</ul>
+                    
+	<pre class="prettyprint lang-html linenums">
+&lt;script type="text/javascript"&gt;
+	var person =  = new Object();
+		person.firstName = "Deepak",
+		person.lastName =  "Sharma"
+	};
+	
+	//Print person object on console
+	console.log(person); 
+	
+	//Clear console
+	console.clear();
+
+	//Show error on console
+	console.error("Error : ","Server not responding"); 
+	
+	//Show warning on console with alert icon
+	console.warn("Function a() is calling multiple times. ");
+	
+	
+&lt;/script&gt;
+	</pre>   
+	
+	<h3 class="question">Debug Browser (Mozilla)</h3>
+    <p> To know about Mozilla browser debugging, please have a look here   
+		<a href="https://developer.mozilla.org/en-US/docs/Web/API/Console">Mozilla Console</a>
+	</p>
+</div>
