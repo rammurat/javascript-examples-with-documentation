@@ -1,13 +1,19 @@
-###OOJS (Object Oriented Java Script)
+#OOJS (Object Oriented Java Script)
 Another initiative to write a documentation on object oriented javascript. Our focus would be to comeup with good and easy examples of javascript and its topics.   
 
-Steps:
+## Purpose
+Quick and better examples of javascript programming 
 
-###Set up server
-npm install
+## Prerequisite 
+* Node should pre-installed globally on your computer 
 
-###Start server
-node server
 
-###Server starts automatically on localhost 
-http://localhost:3000/
+## Steps to run the application
+* Set up server
+<strong>npm install</strong>
+
+* Start server
+<strong>node server</strong>
+
+* Run server on localhost 
+<strong>http://localhost:3000/</strong>
